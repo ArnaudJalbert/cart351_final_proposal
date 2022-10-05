@@ -11,118 +11,188 @@
 </head>
 <body>
     <div class="wrapper">
-    <h1>
-        Astérisque*
-    </h1>
-    <div class="authors">
-        par Lucien Cusson-Fradet et Arnaud Jalbert
-    </div>
-    <h2>
-        Description
-    </h2>
-    <p>
-        En pensant à ce projet, nous voulions approcher l’espace et le temps d’une perspective différente à laquelle nous somme habitués. Nous utilisons souvent les applications de cartes comme Google Maps pour se situer en temps réel dans l’espace et se déplacer. Pour cette application, nous souhaitions plutôt lier la carte au temps et aux êtres vivants.<br> <br>
-        Nous voulions pouvoir visualiser le vécu de ces êtres et voir leur cheminement dans le monde à travers le temps. Nous imaginions de petites lumières représentant chaque individu qui se déplace sur la carte dépendamment de l’endroit où ils étaient à un certain moment. Un utilisateur pourrait tout simplement entrer les années et où une certaine personne a vécu, par exemple si une personne avait vécu de 1960 à 1980 à Montréal, de 1980 à 1995 à Vancouver et de 1995 à 2010 à Paris, on verrait la lumière se déplacer entre ces endroits par rapport à l’année en cours dans l’application. <br> <br>
-        Il serait intéressant de laisser l’utilisateur observer plusieurs vies à la fois et à la vitesse qu’il ou elle désire. On pourrait regarder une vie se défiler pendant 5 minutes ou l’extrême regarder le parcours de plusieurs générations se dérouler pendant des centaines d’années en quelques minutes.<br> <br>
-        Un autre aspect important était de laisser les utilisateurs entrer leurs propres données. Que ce soit sur leur propre vie, celle de leurs proches ou d’un personnage historique, n’importe quelle donnée peut être entré et disponible pour tous, tout en conservant un certain anonymat à la discrétion de l’utilisateur. Les différentes visualisations que nous voulions implémenter sont :
-    </p>
+        <h1>
+            Astérisque*
+        </h1>
+        <div class="authors">
+            par Lucien Cusson-Fradet et Arnaud Jalbert
+        </div>
+        <div class="text-wrapper">
+            <h2>
+                Description
+            </h2>
+            <p>
+                En pensant à ce projet, nous voulions approcher l’espace et le temps d’une perspective différente à laquelle nous somme habitués. Nous utilisons souvent les applications de cartes comme Google Maps pour se situer en temps réel dans l’espace et se déplacer. Pour cette application, nous souhaitions plutôt lier la carte au temps et aux êtres vivants.<br> <br>
+                Nous voulions pouvoir visualiser le vécu de ces êtres et voir leur cheminement dans le monde à travers le temps. Nous imaginions de petites lumières représentant chaque individu qui se déplace sur la carte dépendamment de l’endroit où ils étaient à un certain moment. Un utilisateur pourrait tout simplement entrer les années et où une certaine personne a vécu, par exemple si une personne avait vécu de 1960 à 1980 à Montréal, de 1980 à 1995 à Vancouver et de 1995 à 2010 à Paris, on verrait la lumière se déplacer entre ces endroits par rapport à l’année en cours dans l’application. <br> <br>
+                Il serait intéressant de laisser l’utilisateur observer plusieurs vies à la fois et à la vitesse qu’il ou elle désire. On pourrait regarder une vie se défiler pendant 5 minutes ou l’extrême regarder le parcours de plusieurs générations se dérouler pendant des centaines d’années en quelques minutes.<br> <br>
+                Un autre aspect important était de laisser les utilisateurs entrer leurs propres données. Que ce soit sur leur propre vie, celle de leurs proches ou d’un personnage historique, n’importe quelle donnée peut être entré et disponible pour tous, tout en conservant un certain anonymat à la discrétion de l’utilisateur. Les différentes visualisations que nous voulions implémenter sont :
+            </p>
 
-    <li>
-        <b>Une visualisation « intemporelle »</b> où tous les points sélectionnés sont montrés en même temps. Si par exemple, la personne a vécu de 1960 à 2010 et que le temps est réglé à 1830, le point apparaitrais quand même sur la carte mais serait moins lumineux qu’une personne qui a vécu de 1800 à 1850. Plus « l’horloge » se rapproche du moment où un être a vécu, la force de sa lumière augmentera lentement et sera de plein feu pendant les années de sa vie.
-    </li>
+            <div class="float-container">
+                <div class="float-child">
+                    <div class="text">
+                        <li>
+                            <b>Une visualisation « intemporelle »</b> où tous les points sélectionnés sont montrés en même temps. Si par exemple, la personne a vécu de 1960 à 2010 et que le temps est réglé à 1830, le point apparaitrais quand même sur la carte mais serait moins lumineux qu’une personne qui a vécu de 1800 à 1850. Plus « l’horloge » se rapproche du moment où un être a vécu, la force de sa lumière augmentera lentement et sera de plein feu pendant les années de sa vie.
+                        </li>
+                    </div>
+                </div>
+                <div class="float-child">
+                    <div class="image">
+                        <img src="/images/website_intemporel.png" alt="website_adding_data">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="float-container">
+                <div class="float-child">
+                    <div class="text">
+                        <li>
+                            <b>Une visualisation temporelle</b> où seulement les points qui sont en vie pendant le moment sélectionné par l’utilisateur apparaitra. Si nous sommes en 1950 et qu’un être a vécu de 1800 à 1850, il n’apparaitra pas sur la carte. Si l’être a vécu entre 1920 et 1960, il apparaitra.
+                        </li>
+                    </div>
+                </div>
+                <div class="float-child">
+                    <div class="image">
+                        <img src="/images/website_overview.png" alt="website_adding_data">
+                    </div>
+                </div>
+            </div>
 
-    <li>
-        <b>Une visualisation temporelle</b> où seulement les points qui sont en vie pendant le moment sélectionné par l’utilisateur apparaitra. Si nous sommes en 1950 et qu’un être a vécu de 1800 à 1850, il n’apparaitra pas sur la carte. Si l’être a vécu entre 1920 et 1960, il apparaitra.
-    </li>
+            <div class="float-container">
+                <div class="float-child">
+                    <div class="text">
+                        <li>
+                            <b>Une visualisation « point de vue » </b>où nous suivrons le parcours d’un individu en particulier. La carte bougera automatiquement afin de suivre la lumière du début jusqu’à la fin de son existence.
+                        </li>
+                    </div>
+                </div>
+                <div class="float-child">
+                    <div class="image">
+                        <img src="/images/website_pov.png" alt="website_adding_data">
+                    </div>
+                </div>
+            </div>
+            
+            <p>
+            Notre but est de mettre l’utilisateur en relation avec le temps et l’espace mais à une plus grande amplitude qu’à celle qu’il est normalement accoutumé. On espère permettre aux visiteurs de notre site de prendre un pas de recul et pouvoir analyser en quelques minutes le cheminement complet de sa propre vie ou de ses proches. De pouvoir établir un lien spatio-temporelle avec la vie et le comportement humain. Puisque les données sont partagées, il sera aussi possible d’observer le chemin d’inconnu et se questionner, pourquoi est-ce qu’en tant qu’humain nous décidons de nous déplacer, pourquoi aller à un certain endroit ou au contraire pourquoi rester au même endroit même si le monde est si vaste. L’espace et le moment influence beaucoup comment une personne agit, réfléchit et réagit et cette visualisation pourrait nous aider à comprendre la motivation d’une personne derrière certaines décisions ou déplacements.<br> <br>
+            Nous considérons notre espace comme un endroit de collaboration et de découvertes. Nous voulons encourager les utilisateurs à partager leur histoire, l’histoire de leur famille et à découvrir celles des autres. Si nous prenons comme exemple une personne issue d’une famille immigrante. Il serait très inspirant de voir le chemin parcouru par ses parents ou grands-parents de leur pays d’origine jusqu’à leur pays d’occupation actuel. Nous pourrions même reculer encore plus loin et regarder le parcours de personnage historique, de grands voyageurs et d’explorateurs. On pourrait peut-être même deviner le caractère et la personnalité d’une personne tout simplement avec ses déplacements, une personne qui se déplace beaucoup à peut-être tendance à être plus téméraire, curieuse alors qu’un individu plus sédentaire est peut-être quelqu’un de plus patient, consistent, et aime établir une routine. Plusieurs suppositions peuvent être fait, et nous voulons inviter les utilisateurs à explorer et réfléchir.
+            </p>
 
-     <li>
-        <b>Une visualisation « point de vue » </b>où nous suivrons le parcours d’un individu en particulier. La carte bougera automatiquement afin de suivre la lumière du début jusqu’à la fin de son existence.
-     </li>
-    <p>
-    Notre but est de mettre l’utilisateur en relation avec le temps et l’espace mais à une plus grande amplitude qu’à celle qu’il est normalement accoutumé. On espère permettre aux visiteurs de notre site de prendre un pas de recul et pouvoir analyser en quelques minutes le cheminement complet de sa propre vie ou de ses proches. De pouvoir établir un lien spatio-temporelle avec la vie et le comportement humain. Puisque les données sont partagées, il sera aussi possible d’observer le chemin d’inconnu et se questionner, pourquoi est-ce qu’en tant qu’humain nous décidons de nous déplacer, pourquoi aller à un certain endroit ou au contraire pourquoi rester au même endroit même si le monde est si vaste. L’espace et le moment influence beaucoup comment une personne agit, réfléchit et réagit et cette visualisation pourrait nous aider à comprendre la motivation d’une personne derrière certaines décisions ou déplacements.<br> <br>
-    Nous considérons notre espace comme un endroit de collaboration et de découvertes. Nous voulons encourager les utilisateurs à partager leur histoire, l’histoire de leur famille et à découvrir celles des autres. Si nous prenons comme exemple une personne issue d’une famille immigrante. Il serait très inspirant de voir le chemin parcouru par ses parents ou grands-parents de leur pays d’origine jusqu’à leur pays d’occupation actuel. Nous pourrions même reculer encore plus loin et regarder le parcours de personnage historique, de grands voyageurs et d’explorateurs. On pourrait peut-être même deviner le caractère et la personnalité d’une personne tout simplement avec ses déplacements, une personne qui se déplace beaucoup à peut-être tendance à être plus téméraire, curieuse alors qu’un individu plus sédentaire est peut-être quelqu’un de plus patient, consistent, et aime établir une routine. Plusieurs suppositions peuvent être fait, et nous voulons inviter les utilisateurs à explorer et réfléchir.
-    </p>
-    <h2>
-        Inspirations
-    </h2>
-    <a href="https://clubsolo.org/map" target=”_blank” >
-        Club Solo
-    </a>
-    <p>
-        Ce projet est notre inspiration principale pour notre projet. Ce site web permet
-        d’enregistrer anonymement ses sessions de masturbations et documenter si on a utilisé
-        un jouet et/ou avons regardé de la pornographie pour compléter l’acte. On peut ensuite
-        aller sur le site web et explorer une carte qui nous montre quand une session solo a été
-        fait par un utilisateur et approximativement à quel endroit. Développé pendant la
-        pandémie, lorsque les rencontres étaient plus difficiles, beaucoup se sont tournés vers la
-        masturbation afin de combler leurs besoins sexuels. La carte permet de créer un effet de
-        communauté et changer notre perspective sur la masturbation comme une activité
-        sexuelle et non seulement un remplacement en attendant. Plutôt que d'utiliser des bases
-        de données, l’application dépend des données entrées par ses utilisateurs. Cette
-        fonctionnalité ajoute une touche très personnelle à l’expérience et c’est un point que nous
-        cherchons à ajouter à notre projet. Chaque point prend une plus grande importance
-        sachant que chacun d’entre eux a été enregistré à la main par un utilisateur plutôt que
-        trouver par un algorithme. La carte ajoute aussi une dimension temporelle avec le “slider”
-        qui change les points par rapport à l'heure de la journée. On peut aussi changer de 
-        journée avec les deux flèches. Nous aimons beaucoup le « look» de la carte ainsi que le
-        concept d’interactivité et d’entrée de données par l’utilisateur. La notion du temps est
-        aussi un point que nous cherchons à développer dans notre propre carte.
-    </p>
-    <a href="https://chrome.google.com/webstore/detail/world-birthsdeaths-in-rea/noghphokfbhedlkhnoojmjfdbofidgbi?hl=en" target=”_blank”>
-        World Births/Deaths in Real-Time (Simulation)
-    </a>
-    <p>
-        Cette application Chrome utilise divers ensembles de données de la CIA et d'autres
-        sources pour visualiser la vie et la mort de nombreuses populations à travers le monde
-        au fil du temps et en temps réel. Vous pouvez voir les naissances et les décès dans une
-        liste sur les côtés droit et gauche de l'écran ainsi que des points verts ou rouges sur la
-        carte indiquant où ils se sont produits en temps réel. Bien qu'il s'agisse d'un projet très
-        formel et technique, nous l'avons apprécié car il utilise une carte comme moyen de
-        visualiser des données temporellement. Ils utilisent également des représentations
-        visuelles très claires des lieux de naissance et de mort, ce que nous voulions également
-        faire d'une manière différente dans notre projet. Mais nous pensons que le temps s'affiche
-        trop rapidement et qu'il n'est pas possible de naviguer à travers les années, ce qui était
-        important pour nous. Contrairement à notre idée, Il s'agit d'une simulation et nous
-        voulions que notre projet soit plus personnel et exploratoire.
-    </p>
-    <a href="https://chartogne-taillet.com/en" target=”_blank”>
-        Champagne Chartogne-Taillet
-    </a>
-    <p>
-        Ce site web permet à l’utilisateur d’explorer le vignoble Chartogne-Taillet à travers une
-    carte du domaine. Pendant l’exploration, on peut cliquer sur les différentes parties du
-    domaine pour focusser sur différentes terres et en apprendre plus sur les vins qui y sont
-    produits à cet endroit ainsi que l’historique du terrain. Contrairement au dernier exemple,
-    la carte ajoute une dimension permettant ainsi l'exploration 3D. Cet ajout permet d’avoir
-    plusieurs perspectives de l'endroit et nous donne l’habileté de changer l’angle de la
-    caméra pour avoir des prises de vue variées. La carte 3D embellit beaucoup l’expérience
-    de l’utilisateur et l’environnement est beaucoup plus stylisé que l’exemple précédent.
-    Nous aimions beaucoup les différentes perspectives possibles avec la carte 3D et le
-    grand effort de stylisation qui a été fait. Nous voulions nous inspirer de l’effet de
-    perspective sans nécessairement faire une carte complètement 3D, plutôt simplement
-    changer subtilement l’angle de la caméra pour avoir une idée du relief de la carte. 
-    </p>
-    <h2>
-        Notre Projet
-    </h2>
-    <p>
-        Les points forts que nous avons identifiés dans nos exemples sont:
-    </p>
-        <li>L’interactivité avec la carte</li>
-        <li> visualisation de données à travers le temps </li>
-        <li>La stylisation de la carte</li>
-        <li>L’ajout de données par l’utilisateur</li>
-    <p>
-        Bien que ses points étaient présents dans les projets présentés, chaque projet manquait un point fort qui nous intéressait. Notre projet regroupera toutes ses qualités pour créer
-        une carte interactive qui évoluera temporellement. L’utilisateur pourra se promener à
-        travers le temps et pourra visualiser ses données et celle de sa communauté. Notre carte
-        ajoutera une touche personnelle qui manque souvent dans ce genre de projet. Nous
-        voulions aussi nous inspirer de l’aspect de collaboration et d’interactivité du projet Club
-        Solo, mais tout en laissant l’utilisateur enregistrer des données plus variées comme le
-        vécu de personnages historiques ou d’individus marquants. Bref, nous croyons que notre
-        projet va chercher plusieurs des points forts de nos inspirations mais surtout accompli
-        une mission très différente, autant dans la méthodologie que dans le résultat final.
-    </p>
+            <h2>
+                Inspirations
+            </h2>
+
+            <h2 id="lien">
+                <a href="https://clubsolo.org/map" target=”_blank” >
+                    Club Solo
+                </a>
+            </h2>
+            <a href="https://clubsolo.org/map" target=”_blank” >
+                <img src="/images/club_sexu.jpg" alt="website_adding_data">
+            </a>
+            
+            <p>
+                Ce projet est notre inspiration principale pour notre projet. Ce site web permet
+                d’enregistrer anonymement ses sessions de masturbations et documenter si on a utilisé
+                un jouet et/ou avons regardé de la pornographie pour compléter l’acte. On peut ensuite
+                aller sur le site web et explorer une carte qui nous montre quand une session solo a été
+                fait par un utilisateur et approximativement à quel endroit. Développé pendant la
+                pandémie, lorsque les rencontres étaient plus difficiles, beaucoup se sont tournés vers la
+                masturbation afin de combler leurs besoins sexuels. La carte permet de créer un effet de
+                communauté et changer notre perspective sur la masturbation comme une activité
+                sexuelle et non seulement un remplacement en attendant. Plutôt que d'utiliser des bases
+                de données, l’application dépend des données entrées par ses utilisateurs. Cette
+                fonctionnalité ajoute une touche très personnelle à l’expérience et c’est un point que nous
+                cherchons à ajouter à notre projet. Chaque point prend une plus grande importance
+                sachant que chacun d’entre eux a été enregistré à la main par un utilisateur plutôt que
+                trouver par un algorithme. La carte ajoute aussi une dimension temporelle avec le “slider”
+                qui change les points par rapport à l'heure de la journée. On peut aussi changer de 
+                journée avec les deux flèches. Nous aimons beaucoup le « look» de la carte ainsi que le
+                concept d’interactivité et d’entrée de données par l’utilisateur. La notion du temps est
+                aussi un point que nous cherchons à développer dans notre propre carte.
+            </p>
+            <h2 id="lien">
+                <a href="https://chrome.google.com/webstore/detail/world-birthsdeaths-in-rea/noghphokfbhedlkhnoojmjfdbofidgbi?hl=en" target=”_blank”>
+                    World Births/Deaths in Real-Time (Simulation)
+                </a>
+            </h2>
+            
+            
+            <div class="float-container">
+                <div class="float-child">
+                    <div class="text">
+                        <p>
+                            Cette application Chrome utilise divers ensembles de données de la CIA et d'autres
+                            sources pour visualiser la vie et la mort de nombreuses populations à travers le monde
+                            au fil du temps et en temps réel. Vous pouvez voir les naissances et les décès dans une
+                            liste sur les côtés droit et gauche de l'écran ainsi que des points verts ou rouges sur la
+                            carte indiquant où ils se sont produits en temps réel. Bien qu'il s'agisse d'un projet très
+                            formel et technique, nous l'avons apprécié car il utilise une carte comme moyen de
+                            visualiser des données temporellement. Ils utilisent également des représentations
+                            visuelles très claires des lieux de naissance et de mort, ce que nous voulions également
+                            faire d'une manière différente dans notre projet. Mais nous pensons que le temps s'affiche
+                            trop rapidement et qu'il n'est pas possible de naviguer à travers les années, ce qui était
+                            important pour nous. Contrairement à notre idée, Il s'agit d'une simulation et nous
+                            voulions que notre projet soit plus personnel et exploratoire.
+                        </p>
+                    </div>
+                </div>
+                <div class="float-child">
+                    <div class="image">
+                        <a href="https://chrome.google.com/webstore/detail/world-birthsdeaths-in-rea/noghphokfbhedlkhnoojmjfdbofidgbi?hl=en">
+                            <img src="/images/world_births.jpg" alt="website_adding_data" >
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="lien">
+                <a href="https://chartogne-taillet.com/en" target=”_blank”>
+                    Champagne Chartogne-Taillet
+                </a>
+            </h2>
+            <p>
+                Ce site web permet à l’utilisateur d’explorer le vignoble Chartogne-Taillet à travers une
+            carte du domaine. Pendant l’exploration, on peut cliquer sur les différentes parties du
+            domaine pour focusser sur différentes terres et en apprendre plus sur les vins qui y sont
+            produits à cet endroit ainsi que l’historique du terrain. Contrairement au dernier exemple,
+            la carte ajoute une dimension permettant ainsi l'exploration 3D. Cet ajout permet d’avoir
+            plusieurs perspectives de l'endroit et nous donne l’habileté de changer l’angle de la
+            caméra pour avoir des prises de vue variées. La carte 3D embellit beaucoup l’expérience
+            de l’utilisateur et l’environnement est beaucoup plus stylisé que l’exemple précédent.
+            Nous aimions beaucoup les différentes perspectives possibles avec la carte 3D et le
+            grand effort de stylisation qui a été fait. Nous voulions nous inspirer de l’effet de
+            perspective sans nécessairement faire une carte complètement 3D, plutôt simplement
+            changer subtilement l’angle de la caméra pour avoir une idée du relief de la carte. 
+            </p>
+            <a href="https://chartogne-taillet.com/en">
+                <img src="/images/vignoble.JPG" alt="website_adding_data" >
+            </a>
+
+            <h2>
+                Notre Projet
+            </h2>
+            <p>
+                Les points forts que nous avons identifiés dans nos exemples sont:
+            </p>
+                <li>L’interactivité avec la carte</li>
+                <li> visualisation de données à travers le temps </li>
+                <li>La stylisation de la carte</li>
+                <li>L’ajout de données par l’utilisateur</li>
+            <p>
+                Bien que ses points étaient présents dans les projets présentés, chaque projet manquait un point fort qui nous intéressait. Notre projet regroupera toutes ses qualités pour créer
+                une carte interactive qui évoluera temporellement. L’utilisateur pourra se promener à
+                travers le temps et pourra visualiser ses données et celle de sa communauté. Notre carte
+                ajoutera une touche personnelle qui manque souvent dans ce genre de projet. Nous
+                voulions aussi nous inspirer de l’aspect de collaboration et d’interactivité du projet Club
+                Solo, mais tout en laissant l’utilisateur enregistrer des données plus variées comme le
+                vécu de personnages historiques ou d’individus marquants. Bref, nous croyons que notre
+                projet va chercher plusieurs des points forts de nos inspirations mais surtout accompli
+                une mission très différente, autant dans la méthodologie que dans le résultat final.
+            </p>
+            <img src="/images/website_adding_data.png" alt="Représentation visuelle de l'ajout de données">
+        </div>
     </div>
 </body>
 </html>
